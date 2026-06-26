@@ -12,7 +12,7 @@ services:
     image: joindevops/mongodb:v1
     container_name: mongodb
     volumes:
-    - mongodb:/data/db
+    - mongodb:/data/db    # MongoDB data directory inside the container
   redis:
     image: redis:7.0
     container_name: redis
@@ -20,7 +20,7 @@ services:
     - redis:/data
   mysql:
     build: ./mysql
-    image: joindevops/mysql:v1
+    image: joindevops/mysql:v1  
     container_name: mysql
     volumes:
     - mysql:/var/lib/mysql
